@@ -1,4 +1,7 @@
+// trazendo o arquivo express para meu script
 var express = require('express');
+
+// criando uma instancia do express
 var app = express()
 
 app.set('view engine', 'ejs');
