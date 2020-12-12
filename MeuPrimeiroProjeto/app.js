@@ -4,7 +4,7 @@ var app = express()
 app.set('view engine', 'ejs');
 
 app.get('/home', (req, res) => {
-    
+    res.render("../views/home");
 })
 
 app.get('/', function(req, res){
