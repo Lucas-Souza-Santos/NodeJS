@@ -18,6 +18,15 @@ app.get('/', function(req, res){
     });
 });
 
+app.get('/cadastro', function(req, res){
+    let name = req.query["nome"];
+    if(name){
+    res.send('<h1>' + name + '</h1>');
+    }else{
+        res.send('<h1>Nenhum nome foi passado</h1>')
+    }
+});
+
 app.get('/form/:nome/:sobrenome?', function(req, res){
     res.send('<h1>' + req.params.nome + ' ' + req.params.sobrenome +'</h1>');
 });
