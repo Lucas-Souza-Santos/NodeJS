@@ -18,6 +18,10 @@ app.get('/', function(req, res){
     });
 });
 
+app.get('/form/:nome/:sobrenome?', function(req, res){
+    res.send('<h1>' + req.params.nome + ' ' + req.params.sobrenome +'</h1>');
+});
+
 app.listen(3000, function(){
     console.log('Ouvindo na porta 3000');
 })
